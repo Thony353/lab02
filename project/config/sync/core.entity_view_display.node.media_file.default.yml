@@ -1,0 +1,38 @@
+uuid: dde3b68c-83cb-4c4e-b061-7da30f9bb777
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.media_file.field_file
+    - field.field.node.media_file.field_license
+    - node.type.media_file
+  module:
+    - file
+    - user
+id: node.media_file.default
+targetEntityType: node
+bundle: media_file
+mode: default
+content:
+  field_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_license:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

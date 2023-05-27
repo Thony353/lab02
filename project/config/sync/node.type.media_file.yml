@@ -1,0 +1,17 @@
+uuid: 506b6cf0-a421-4cbd-98f2-efa22f600473
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Media file'
+type: media_file
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

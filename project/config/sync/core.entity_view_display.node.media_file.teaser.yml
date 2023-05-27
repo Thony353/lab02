@@ -1,0 +1,24 @@
+uuid: c5f279c6-5cd6-475a-bfbd-57b9c44012de
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.media_file.field_file
+    - field.field.node.media_file.field_license
+    - node.type.media_file
+  module:
+    - user
+id: node.media_file.teaser
+targetEntityType: node
+bundle: media_file
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_file: true
+  field_license: true

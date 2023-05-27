@@ -1,0 +1,8 @@
+uuid: 3700c62f-5498-4b89-b74a-de272ccbccc5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Content licenses'
+vid: content_licenses
+description: 'Determine the conditions under which the author distributes the material'
+weight: 0
