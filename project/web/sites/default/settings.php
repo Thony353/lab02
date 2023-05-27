@@ -828,10 +828,17 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  *
  * Keep this code block at the end of this file to take full effect.
  */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
+
+if (file_exists(__DIR__ . '/settings.ddev.php') && getenv('IS_DDEV_PROJECT') == 'true') {
+  include __DIR__ . '/settings.ddev.php';
+}
+
+
+
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
+
 $databases['default']['default'] = array (
   'database' => 'db',
   'username' => 'db',
@@ -844,3 +851,6 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_yx6QkbNxeBXzARop7ZTjAZDPvFqp5GxHvfbk_wgag73mdsqY2jMwB4aVYMIuH_ZlnbMD7HOwHg/sync';
+
+
+$settings['config_sync_directory'] = '../config/sync';
